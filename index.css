@@ -1,0 +1,18 @@
+.container {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;  
+
+  height: 800px;
+}
+
+.container > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+
+  width: 400px;
+}
