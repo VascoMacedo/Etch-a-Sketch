@@ -13,6 +13,13 @@
   <script>
     const container = document.querySelector(".container");
 
+    for(let i = 0; i < 256; i++){
+      const div1 = document.createElement("div");
+      div1.innerText = "X";
+      container.appendChild(div1);
+    }
+
+    /*
     const div1 = document.createElement("div");
     div1.innerText = "X";
     container.appendChild(div1);
@@ -90,6 +97,7 @@
     const div24 = document.createElement("div");
     div24.innerText = "X";
     container.appendChild(div24);
+    */
   </script>
 </body>
 </html>
