@@ -10,7 +10,7 @@ body{
 }
 
 .container {
-  border: 2px dotted rgb(96 139 168);
+  border: 0px dotted rgb(96 139 168);
   display: flex;
 
   margin: 0px;  
@@ -25,11 +25,24 @@ body{
   height: 960px;
 }
 
+/*
 .container > * {
-  border: 2px solid rgb(96 139 168);
+  border: 0px solid rgb(96 139 168);
   border-radius: 5px;
   background-color: rgb(96 139 168 / 0.2);
 
-  width: 55px;
-  height: 55px;
+  width: 58px;
+  height: 58px;
+}
+*/
+
+/* Calcular (960/6)-2 para ter o tamanho cert de cada 1 das 6 divs */
+
+.container > * {
+  border: 0px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+
+  width: 158px;
+  height: 158px;
 }
