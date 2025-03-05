@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
-  <title>Document</title>
+  <title>Etch-a-Sketch</title>
 </head>
 <body>
 
@@ -12,6 +12,11 @@
 
   <script>
     const container = document.querySelector(".container");
+
+    const inputSize = prompt("How many div per side?", 6);
+    let totalDivs = (inputSize * inputSize);
+    let heightDiv = (960 / inputSize) - 2+"px";
+    let widthDiv = (960 / inputSize) - 2+"px";
 
     /*
     for(let i = 1; i <= 256; i++){
@@ -25,9 +30,12 @@
     }
     */
 
-    for(let i = 1; i <= 36; i++){
+    for(let i = 1; i <= (totalDivs); i++){
       const div1 = document.createElement("div");
       div1.innerText = i;
+      div1.style.height = heightDiv;
+      div1.style.width = widthDiv;
+
       container.appendChild(div1);
 
       div1.addEventListener("mouseenter", () => {
