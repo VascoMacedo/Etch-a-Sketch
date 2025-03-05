@@ -17,7 +17,13 @@
       const div1 = document.createElement("div");
       div1.innerText = "X";
       container.appendChild(div1);
+
+      div1.addEventListener("mouseenter", () => {
+        div1.style.backgroundColor = "red";
+      });
     }
+
+
 
     /*
     const div1 = document.createElement("div");
