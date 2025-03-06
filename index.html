@@ -7,40 +7,34 @@
   <title>Etch-a-Sketch</title>
 </head>
 <body>
-
+  <button>Change Size to 5</button>
   <div class="container"></div>
 
   <script>
     const container = document.querySelector(".container");
+    const button = document.querySelector("button");
+    button.addEventListener( "click", () => {
+      deleteSketchPad(totalDivs);
+      setSizeValues(5);
+      drawSketchPad(totalDivs);
+    });
+
     let totalDivs, heightDiv, widthDiv;
 
-    const inputSize = prompt("How many div per side?", 6);
-    /*
-    let totalDivs = (inputSize * inputSize);
-    let heightDiv = (960 / inputSize) - 2+"px";
-    let widthDiv = (960 / inputSize) - 2+"px";
-    */
+    let inputSize = prompt("How many div per side?", 6);
 
     setSizeValues(inputSize);    
     drawSketchPad(totalDivs);
-    deleteSketchPad(totalDivs);
+    
     ///Teste para ver se funionava como eu pensava (sim, funciona)
     ///So falta junction para APAGAR - FEIT0!!!
-    ///So Falta Adicionar Button Com EVENT LISTENER
+    ///So Falta Adicionar Button Com EVENT LISTENER    
+    /*
+    deleteSketchPad(totalDivs);
     setSizeValues(5);
     drawSketchPad(totalDivs);
-
-    /*
-    for(let i = 1; i <= 256; i++){
-      const div1 = document.createElement("div");
-      div1.innerText = i;
-      container.appendChild(div1);
-
-      div1.addEventListener("mouseenter", () => {
-        div1.style.backgroundColor = "red";
-      });
-    }
     */
+
 
     function deleteSketchPad(divsToDelete){
       for(let i = 0; i < divsToDelete; i++){
