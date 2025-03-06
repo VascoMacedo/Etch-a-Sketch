@@ -12,11 +12,17 @@
 
   <script>
     const container = document.querySelector(".container");
+    let totalDivs, heightDiv, widthDiv;
 
     const inputSize = prompt("How many div per side?", 6);
+    /*
     let totalDivs = (inputSize * inputSize);
     let heightDiv = (960 / inputSize) - 2+"px";
     let widthDiv = (960 / inputSize) - 2+"px";
+    */
+
+    setSizeValues(inputSize);
+    drawSketchPad(totalDivs);
 
     /*
     for(let i = 1; i <= 256; i++){
@@ -30,18 +36,27 @@
     }
     */
 
-    for(let i = 1; i <= (totalDivs); i++){
-      const div1 = document.createElement("div");
-      div1.innerText = i;
-      div1.style.height = heightDiv;
-      div1.style.width = widthDiv;
+    function setSizeValues(inputSizeLocal){
+      totalDivs = (inputSizeLocal * inputSizeLocal);
+      heightDiv = (960 / inputSizeLocal) - 2+"px";
+      widthDiv = (960 / inputSizeLocal) - 2+"px";
+    } 
 
-      container.appendChild(div1);
+    function drawSketchPad(totalDivsLocal){
+      for(let i = 1; i <= (totalDivsLocal); i++){
+        const div1 = document.createElement("div");
+        div1.innerText = i;
+        div1.style.height = heightDiv;
+        div1.style.width = widthDiv;
 
-      div1.addEventListener("mouseenter", () => {
-        div1.style.backgroundColor = "red";
-      });
+        container.appendChild(div1);
+
+        div1.addEventListener("mouseenter", () => {
+          div1.style.backgroundColor = "red";
+        });
+      }
     }
+    
   </script>
 </body>
 </html>
