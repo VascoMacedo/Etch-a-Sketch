@@ -21,7 +21,13 @@
     let widthDiv = (960 / inputSize) - 2+"px";
     */
 
-    setSizeValues(inputSize);
+    setSizeValues(inputSize);    
+    drawSketchPad(totalDivs);
+    deleteSketchPad(totalDivs);
+    ///Teste para ver se funionava como eu pensava (sim, funciona)
+    ///So falta junction para APAGAR - FEIT0!!!
+    ///So Falta Adicionar Button Com EVENT LISTENER
+    setSizeValues(5);
     drawSketchPad(totalDivs);
 
     /*
@@ -35,6 +41,14 @@
       });
     }
     */
+
+    function deleteSketchPad(divsToDelete){
+      for(let i = 0; i < divsToDelete; i++){
+        console.log(i);
+        const divEliminar = container.firstElementChild;
+        divEliminar.remove();
+      }      
+    }
 
     function setSizeValues(inputSizeLocal){
       totalDivs = (inputSizeLocal * inputSizeLocal);
