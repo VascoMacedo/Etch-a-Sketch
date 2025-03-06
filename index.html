@@ -7,7 +7,7 @@
   <title>Etch-a-Sketch</title>
 </head>
 <body>
-  <button>Change Size to 5</button>
+  <button>Change Size</button>
   <div class="container"></div>
 
   <script>
@@ -15,7 +15,8 @@
     const button = document.querySelector("button");
     button.addEventListener( "click", () => {
       deleteSketchPad(totalDivs);
-      setSizeValues(5);
+      inputSize = prompt("How many div per side?", 6);
+      setSizeValues(inputSize);
       drawSketchPad(totalDivs);
     });
 
