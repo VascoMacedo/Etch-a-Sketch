@@ -25,17 +25,7 @@
     let inputSize = prompt("How many div per side?", 6);
 
     setSizeValues(inputSize);    
-    drawSketchPad(totalDivs);
-    
-    ///Teste para ver se funionava como eu pensava (sim, funciona)
-    ///So falta junction para APAGAR - FEIT0!!!
-    ///So Falta Adicionar Button Com EVENT LISTENER    
-    /*
-    deleteSketchPad(totalDivs);
-    setSizeValues(5);
-    drawSketchPad(totalDivs);
-    */
-
+    drawSketchPad(totalDivs);        
 
     function deleteSketchPad(divsToDelete){
       for(let i = 0; i < divsToDelete; i++){
@@ -54,7 +44,7 @@
     function drawSketchPad(totalDivsLocal){
       for(let i = 1; i <= (totalDivsLocal); i++){
         const div1 = document.createElement("div");
-        div1.innerText = i;
+        //div1.innerText = i;
         div1.style.height = heightDiv;
         div1.style.width = widthDiv;
 

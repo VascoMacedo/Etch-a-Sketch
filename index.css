@@ -5,6 +5,9 @@ html, body {
 
 body{  
   display: flex;
+  /* Coloca o botao em cima e nao ao lado
+  flex-direction: column;
+  */
   justify-content: center;
   align-items: center;
 }
